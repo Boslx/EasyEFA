@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EasyEFA</name>
+    </assembly>
+    <members>
+        <member name="M:EasyEFA.Controllers.StationController.GetStations(System.String,System.Int32,System.String)">
+            <summary>
+            Returns a list of all stations including the keyword
+            </summary>
+            <param name="keyword">Search phrase for the stations you're looking for</param>
+            <param name="limit">Max records to return</param>
+            <param name="language">Language of the returned strings</param>
+            <response code="200">OK</response>
+        </member>
+        <member name="M:EasyEFA.Controllers.StationController.GetDeparturesFromStationID(System.String,System.Nullable{System.DateTime},System.Int32,System.String)">
+            <summary>
+            Returns all departures at the specified datetime
+            </summary>
+            <param name="stationID">ID of the station whose departures are returned</param>
+            <param name="dateTime">Requested time. If empty, the current time is used</param>
+            <param name="limit">Max records to return</param>
+            <param name="language">Language of the returned strings</param>
+            <response code="200">OK</response>
+        </member>
+    </members>
+</doc>
