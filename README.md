@@ -3,10 +3,10 @@ With EasyEfa you can easily access the publicly accessible EFA Api. The project 
 
 - EasyEfaCore
 Sends the request to the EFA Server and parses the response
-- *EasyEfaMining*
-Todo: Periodically sends requests to Efa and stores the results in a database.
+- *EasyEfaDelayMiner*
+Todo: Saves the actual departure times in a database
 - EasyEfa
-Provides a simple rest api to easily get information about the timetable. 
+Provides a simple rest api to easily get information about the timetable
 
 ## Similar projects
 - https://github.com/opendata-stuttgart/metaEFA

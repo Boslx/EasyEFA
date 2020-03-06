@@ -255,7 +255,7 @@
 		public string Number { get; internal set; }
 
 		[JsonProperty("symbol")]
-		public int Symbol { get; internal set; }
+		public string Symbol { get; internal set; }
 
 		[JsonProperty("motType")]
 		public int MotType { get; internal set; }

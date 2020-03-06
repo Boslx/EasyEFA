@@ -57,11 +57,11 @@ namespace EasyEFA.Services
 				result.Add(new Departure() { PlannedDateTime = departure.DateTime.DateTime, 
 					RealDateTime = departure.RealDateTime?.DateTime, 
 					Line = new Models.Line() 
-						{ Code = departure.ServingLine.Code, 
+						{  
 							Direction = departure.ServingLine.Direction, 
 							DirectionFrom = departure.ServingLine.DirectionFrom, 
 							Name = departure.ServingLine.Name, 
-							Number = departure.ServingLine.Name}
+							Number = departure.ServingLine.Number}
 				});
 			}
 
