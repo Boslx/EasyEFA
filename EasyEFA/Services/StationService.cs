@@ -25,7 +25,7 @@ namespace EasyEFA.Services
 
 		public async Task<IEnumerable<Station>> GetStations(string keyword, int limit, string language)
 		{
-			double[] coordStringToDecimal(Point point)
+			static double[] coordStringToDecimal(Point point)
 			{
 				var splittedCoords = point.Ref.Coords.Split(',', StringSplitOptions.RemoveEmptyEntries);
 				return new double[] { double.Parse(splittedCoords[0], CultureInfo.InvariantCulture), double.Parse(splittedCoords[1], CultureInfo.InvariantCulture) };
