@@ -8,6 +8,7 @@ FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
 COPY ["EasyEFA/EasyEFA.csproj", "EasyEFA/"]
 COPY ["EasyEFACore/EasyEFACore.csproj", "EasyEFACore/"]
+
 RUN dotnet restore "EasyEFA/EasyEFA.csproj"
 COPY . .
 WORKDIR "/src/EasyEFA"
@@ -19,4 +20,5 @@ RUN dotnet publish "EasyEFA.csproj" -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+COPY --from=publish /src/EasyEFA/EasyEFA.xml .
 ENTRYPOINT ["dotnet", "EasyEFA.dll"]

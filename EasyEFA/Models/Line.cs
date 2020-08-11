@@ -14,6 +14,12 @@ namespace EasyEFA.Models
 		[DataMember(Name = "number")]
 		public string Number { get; set; }
 
+		[DataMember(Name = "network")]
+		public string Network { get; set; }
+
+		[DataMember(Name = "id")]
+		public string Id { get; set; }
+
 		[DataMember(Name = "direction")]
 		public string Direction { get; set; }
 

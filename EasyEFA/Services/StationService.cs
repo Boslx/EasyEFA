@@ -60,6 +60,8 @@ namespace EasyEFA.Services
 						{  
 							Direction = departure.ServingLine.Direction, 
 							DirectionFrom = departure.ServingLine.DirectionFrom, 
+							Network =  departure.ServingLine.LiErgRiProj?.Network,
+							Id = departure.ServingLine.LiErgRiProj?.Line,
 							Name = departure.ServingLine.Name, 
 							Number = departure.ServingLine.Number}
 				});
